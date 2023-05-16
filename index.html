@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Booking</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" media="screen and (max-width: 1070px)" href="phone1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap" rel="stylesheet">
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const orderButtons = document.querySelectorAll('.btn');
+            const cartLogo = document.getElementById('cart-logo');
+
+            orderButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    cartLogo.querySelector('img').src = 'images/addtocart-filled.png';
+                    alert('Item added to cart!');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav id="navBar">
+        <div id="logo">
+            <img src="mainlogo.png" alt="Online Food Booking">
+        </div>
+        <div id="cart-logo">
+            <img src="images/diakomarunongmagcode.png" alt="Cart">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="#menu-section">Menu</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to my Restourant  </h1>
+        <p>If you could let me know specifically what you need help with, I'd be happy to assist you to the best of my abilities. </p>  
+        <button class="btn">Order Now!</button>
+    </section>
+
+
+    <section class="services-container">
+        <h1 class="h-primary center">
+            Our Services
+        </h1>
+        <div id="services">
+            <div class="box">
+                <img src="images/2.png" alt="">
+                <h2 class="h-secondary center">Order Online</h2>
+                <p class="center">I'm happy to help with food ordering! If you're a customer looking to place a food order, here are some of our menu.</p>
+            </div>
+            <div class="box">
+                <img src="images/1.jpg" alt="">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p class="center">Our team of experienced chefs and servers are committed to providing exceptional service and ensuring that your event runs smoothly.</p>
+            </div>
+            <div class="box">
+                <img src="images/3.png" alt="">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p class="center">Double-check the order before leaving to ensure that everything is correct. If there are any issues, be willing to listen and offer solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-section">
+        <h1 class="h-primary center">Top of the line Food</h1>
+        <div id="menu">
+            <div class="menu-item">
+                <img src="images/logo1.png" alt="menu">
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo2.png" alt="menu">
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo3.jpg" alt="menu">
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images/logo4.jpg" alt="menu">
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="noaction.php">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                    
+                    <label for="contact">Contact: </label>
+                    <input type="text" name="contact" id="contact" placeholder="Enter Your Number">
+
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+
+                    <label for="text">Message: </label>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                    
+                    <input type="submit">
+
+                  
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+    <p>Designed by John Austin Saddi</p>
+    </footer>
+</body>
+
+</html>
